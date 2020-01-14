@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>HRx</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+	<a th:href="@{/}">Głowna</a>
+	<a th:href="@{/fill}">Dodaj książkę</a>
+	<a th:href="@{/show}">Wyświtla listę</a>
+	
+	<table>
+		<tr>
+			<td>ISBN</td>
+			<td>Tytuł</td>
+			<td>Autor</td>
+			<td>Opis</td>
+			<td>Cena</td>
+			<td>Ilość stron</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr th:each="i : ${bookL}">
+			<td th:text="${i.isbn}"></td>
+			<td th:text="${i.title}"></td>
+			<td th:text="${i.author}"></td>
+			<td th:text="${i.description}"></td>
+			<td th:text="${i.price}"></td>
+			<td th:text="${i.pages}"></td>
+			<td><a th:href="@{'/bookedit/' + ${i.isbn}}">edytuj</a></td>
+			<td><a th:href="@{'/bookremove/' + ${i.isbn}}">usuń</a></td>
+		</tr>
+	</table>
+</body>
+</html>

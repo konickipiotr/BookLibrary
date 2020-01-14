@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>HRx</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+	<a th:href="@{/}">Głowna</a>
+	<a th:href="@{/fill}">Dodaj książkę</a>
+	<a th:href="@{/show}">Wyświtla listę</a>
+	
+	
+	<h1> Witaj w twojej bibliotece</h1>
+	<span>Ilośc książek w bibliotece: </span><span th:text="${nrOfBooks}"></span><br>
+	<span>Wartość wszystkich książek: </span><span th:text="${#numbers.formatDecimal(sum,1,2,'COMMA')}"> zł</span><br>
+	<span>Średnia cena książi: </span><span th:text="${#numbers.formatDecimal(averagePrice,1,2,'COMMA')}"> zł</span><br>
+	<span>Ilośc stron wszytstkich książek: </span><span th:text="${pagesSum}"></span><br>
+</body>
+</html>
