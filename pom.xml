@@ -86,8 +86,8 @@
     <version>1.8.0</version>
     <configuration>
        <schemaVersion>V2</schemaVersion>
-       <resourceGroup>gs-spring-boot-1559091271202-rg</resourceGroup>
-       <appName>gs-spring-boot-1559091271202</appName>
+       <resourceGroup>Konicki</resourceGroup>
+       <appName>BooksLibrary</appName>
        <region>westeurope</region>
        <pricingTier>P1V2</pricingTier>
        <runtime>
